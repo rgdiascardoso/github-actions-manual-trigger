@@ -50,7 +50,7 @@ POST https://api.github.com/repos/:owner/:repo/dispatches
 An example using cURL:
 
 ```shell
-curl -X POST 'https://api.github.com/repos/rgdiascardoso/github-actions-manual-trigger/dispatches' \ 
+curl -i -X POST 'https://api.github.com/repos/rgdiascardoso/github-actions-manual-trigger/dispatches' \ 
 -u {{ username }}:{{ password }} \
 -d '{"event_type": "example-event", "client_payload": {"foo":"bar"}}'
 ```
