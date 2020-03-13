@@ -47,7 +47,7 @@ POST https://api.github.com/repos/:owner/:repo/dispatches
 }
 ```
 
-A possible better alternative in the long run is to issue a GitHub access token from "Settigs\Developer Setting\Personal Access Tokens" and make the POST request with a Bearer Authorization header.
+A possible better alternative in the long run is to issue a GitHub access token from "Settings\Developer Settings\Personal Access Tokens" and make the POST request with a Bearer Authorization header.
 
 A successful request will be coded 204 No Content, without body.
 
