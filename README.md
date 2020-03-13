@@ -8,7 +8,7 @@ GitHub actions support Webhook events as starting points for running a workflow
 
 Most of these builtin events are tied to specific Gitub events, such as "deployment" or "milestone".
 
-There is, however, a generic event that should be used to trigger a GitHub Actions workflow from an external source, named [repository_dispatch] (https://help.github.com/en/actions/reference/events-that-trigger-workflows#external-events-repository_dispatch)
+There is, however, a generic event that should be used to trigger a GitHub Actions workflow from an external source, named [repository_dispatch](https://help.github.com/en/actions/reference/events-that-trigger-workflows#external-events-repository_dispatch)
 
 ## repository_dispatch
 
@@ -51,4 +51,4 @@ A possible better alternative in the long run is to issue a GitHub access token 
 
 A successful request will be coded 204 No Content, without body.
 
-Additional information on the "repository_dispatch" event can be found [here] (https://developer.github.com/v3/repos/#create-a-repository-dispatch-event)
+Additional information on the "repository_dispatch" event can be found [here](https://developer.github.com/v3/repos/#create-a-repository-dispatch-event)
