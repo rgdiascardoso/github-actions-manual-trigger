@@ -1,0 +1,10 @@
+name: Hello World Repo Dispatch
+on:
+  repository_dispatch:
+    types: example-event
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo ${{ github.event.client_payload.foo }}
