@@ -47,6 +47,19 @@ POST https://api.github.com/repos/:owner/:repo/dispatches
 }
 ```
 
+An example using cURL:
+
+```shell
+curl -u {{ username }}:{{ password }} --request POST 'https://api.github.com/repos/rgdiascardoso/github-actions-manual-trigger/dispatches' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "event_type": "example-event",
+  "client_payload": {
+    "foo": "bar"
+  }
+}'
+```
+
 A possible better alternative in the long run is to issue a GitHub access token from "Settings\Developer Settings\Personal Access Tokens" and make the POST request with a Bearer Authorization header.
 
 A successful request will be coded 204 No Content, without body.
