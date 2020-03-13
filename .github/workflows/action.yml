@@ -7,4 +7,5 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - run: echo ${{ github.event.client_payload.foo }}
+    - name: foo
+      run: echo ${{ github.event.client_payload.foo }}
