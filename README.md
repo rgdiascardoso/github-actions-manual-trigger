@@ -51,7 +51,7 @@ An example using cURL:
 
 ```shell
 curl -X POST 'https://api.github.com/repos/rgdiascardoso/github-actions-manual-trigger/dispatches' \ 
--u {{ username }}:{{password }} \
+-u {{ username }}:{{ password }} \
 -d '{"event_type": "example-event", "client_payload": {"foo":"bar"}}'
 ```
 
