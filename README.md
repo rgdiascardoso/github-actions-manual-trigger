@@ -28,10 +28,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - run: echo ${{ github.event.client_payload.foo }}
+    - name: foo
+      run: echo ${{ github.event.client_payload.foo }}
 ```
 
-Such workflow can be triggered by a POST request to the GitHub API, with Basic Authorization with GitHub username and password.
+Such workflow can be triggered by a POST request to the GitHub API, with Basic Authorization with GitHub username and password. The request body should include the "event_type" matching the one defined in the workflow, and an optional "client_payload".
 
 ```
 POST https://api.github.com/repos/:owner/:repo/dispatches
@@ -49,3 +50,5 @@ POST https://api.github.com/repos/:owner/:repo/dispatches
 A possible better alternative in the long run is to issue a GitHub access token from "Settigs\Developer Setting\Personal Access Tokens" and make the POST request with a Bearer Authorization header.
 
 A successful request will be coded 204 No Content, without body.
+
+Additional information on the "repository_dispatch" event can be found [here] (https://developer.github.com/v3/repos/#create-a-repository-dispatch-event)
