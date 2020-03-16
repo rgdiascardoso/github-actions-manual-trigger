@@ -1,8 +1,9 @@
 name: Hello World Repo Dispatch
 on:
-  repository_dispatch:
-    types: example-event
-
+  #repository_dispatch:
+  #  types: example-event
+  release:
+    types: created
 jobs:
   test:
     runs-on: ubuntu-latest
