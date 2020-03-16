@@ -8,4 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: foo
-      run: echo ${{ github.event.client_payload.foo }}
+      run: |
+        echo Greetings from v2 branch!
+        echo ${{ github.event.client_payload.foo }}
