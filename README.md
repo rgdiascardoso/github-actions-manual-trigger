@@ -60,3 +60,16 @@ A possible better alternative in the long run is to issue a GitHub access token 
 A successful request will be coded 204 No Content, without body.
 
 Additional information on the "repository_dispatch" event can be found [here](https://developer.github.com/v3/repos/#create-a-repository-dispatch-event)
+
+## Solutions using `repository_dispatch`
+
+There are some other tools that utilize the `repository_dispatch` event for you, without needing to run `curl` locally.
+
+### [Actions Panel](https://www.actionspanel.app/)
+[Actions Panel](https://www.actionspanel.app/) is a GitHub App that you can use, where the credentials management is done via an OAuth login flow, so you never have to use your username and password, and you never have to manage your own Personal Access Tokens. The UI is hosted for you and conveniently lets you provide parameters to inject into your `repository_dispatch`.
+
+### [peter-evans/repository-dispatch](https://github.com/peter-evans/repository-dispatch)
+[peter-evans/repository-dispatch](https://github.com/peter-evans/repository-dispatch) is a GitHub Action which sends a `repository_dispatch` event for you. You can trigger this workflow through some other event, such as adding a comment on a PR or Issue.
+
+### * [Action Button](https://github-action-button.web.app/#details)
+[Action Button](https://github-action-button.web.app/#details) is another GitHub App that acts as an easy way for issuing a `curl` command, similar to [Actions Panel](https://www.actionspanel.app/). The [Action Button](https://github-action-button.web.app/#details) suggested approach is to add badges to your README, so no other UI is necessary!
