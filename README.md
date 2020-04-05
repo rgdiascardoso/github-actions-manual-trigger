@@ -71,5 +71,5 @@ There are some other tools that utilize the `repository_dispatch` event for you,
 ### [peter-evans/repository-dispatch](https://github.com/peter-evans/repository-dispatch)
 [peter-evans/repository-dispatch](https://github.com/peter-evans/repository-dispatch) is a GitHub Action which sends a `repository_dispatch` event for you. You can trigger this workflow through some other event, such as adding a comment on a PR or Issue.
 
-### * [Action Button](https://github-action-button.web.app/#details)
+### [Action Button](https://github-action-button.web.app/#details)
 [Action Button](https://github-action-button.web.app/#details) is another GitHub App that acts as an easy way for issuing a `curl` command, similar to [Actions Panel](https://www.actionspanel.app/). The [Action Button](https://github-action-button.web.app/#details) suggested approach is to add badges to your README, so no other UI is necessary!
